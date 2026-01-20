@@ -24,7 +24,7 @@ __global__ void softmax_kernel(const float* input, float* output, int feature_si
 
 extern "C" void day11_softmax(const float* input, float* output, int feature_size) {
     // TODO: kernel launch configuration 설정
-    dim3 threadsPerBlock(BLOCKSIZE));
+    dim3 threadsPerBlock(BLOCKSIZE);
     dim3 blocksPerGrid(ceil(feature_size, BLOCKSIZE));
 
     softmax_kernel<<<blocksPerGrid, threadsPerBlock>>>(input, output, feature_size);

@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
   pre-commit:
-    runs-on: [runner-cpu]
+    runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
